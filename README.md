@@ -2,13 +2,31 @@
 
 ## Embedded software development
 
+### Communication
+
+* [Webex link](https://imt-atlantique.webex.com/meet/MSc-IT)
+* [Mattermost link](https://mattermost.imt-atlantique.fr/mooc-plido/channels/os-and-ml)
+
+### Schedule
+
+* Tue 03-Jan - 09:30-10:45, 11:00-12:15 - session 1 - Webex
+* Wed 04-Jan - 09:30-10:45, 11:00-12:15 - session 2 - Webex
+* Tue 10-Jan - 09:30-10:45, 11:00-12:15 - session 3 - on site
+* Wed 11-Jan - 09:30-10:45 - session 4a - on site
+* Tue 17-Jan - 15:15-16:30 - session 4b - Webex
+* Wed 18-Jan - 09:30-10:45, 11:00-12:15 - session 5 - Webex
+
+Practical sessions:
+* Wed 11-Jan - 11:00-12:15
+* Tue 17-Jan - 09:30-10:45, 11:00-12:15, 13:45-15:00
+
 ### Course material
 
 * Some extracts from [this presentation about connected devices](https://pascalbod.github.io/iot-en-presentation/#/)
 * [This presentation about RTOS](https://pascalbod.github.io/rtos-en-presentation/) 
 * An [ESP-EYE](https://www.espressif.com/en/products/devkits/esp-eye/overview)
 
-### Hardware, and a little bit of software
+### Session 1 - 03-Jan - Hardware, and a little bit of software
 
 * [Hardware progress](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/device-2)
 * [Memory, processing power and application](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/device-3)
@@ -20,35 +38,9 @@
 * [Common microcontroller families for connected devices](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/4/16)
 * [Peripherals](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/device-5)
 * [Interfacing with peripherals](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/device-6)
-* Floating point arithmetic
+* [Floating point arithmetic](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/device-6b)
 
-### Target board
-
-#### ESP32 microcontroller
-
-* Microcontroller characteristics
-* Hardware documentation
-* Software documentation
-* Wi-Fi
-* Bluetooth
-* Interrupt matrix
-* IO_MUX and GPIO matrix
-* GPIO
-* I2S
-* Serial link
-* Timer
-
-#### ESP32-EYE board
-
-* Characteristics
-* Schematics
-
-#### Software
-
-* ESP-IDF
-* ESP-WHO
-
-### Software
+### Session 2 - 04-Jan - Software - part 1
 
 * [Cross development](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/1)
 * [Execution environments](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/5)
@@ -58,6 +50,35 @@
     * Interruptions and background task
     * Usual architecture of a bare metal application
 * [Useful design patterns](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/54)
+
+Presentation of the target board:
+* ESP32, ESP-EYE, development environment, etc.
+
+### Session 3 - 10-Jan - Target board
+
+* ESP32 microcontroller
+  * Microcontroller characteristics
+  * Hardware documentation
+  * Software documentation
+  * Wi-Fi
+  * Bluetooth
+  * Interrupt matrix
+  * IO_MUX and GPIO matrix
+  * GPIO
+  * I2S
+  * Serial link
+  * Timer
+* ESP32-EYE board
+  * Characteristics
+  * Schematics
+* Software
+  * ESP-IDF
+  * ESP-WHO
+  * Eclipse IDE
+* Build, run, debug
+
+### Session 4a - 11-Jan - Software - part 2
+
 * [RTOS](https://pascalbod.github.io/rtos-en-presentation/)
   * Components
   * Accessing shared resources
@@ -67,10 +88,13 @@
   * Memory allocation
   * Middleware
 
-### Communications
+### Session 4b - 17-Jan - Communications - part 1
 
 * [Public land mobile networks](https://pascalbod.github.io/iot-en-presentation/#/communications-2)
 * [Unlicensed LPWAN](https://pascalbod.github.io/iot-en-presentation/#/communications-3)
+
+### Session 5 - 18-Jan - Communications - part 2
+
 * [Satellite networks](https://pascalbod.github.io/iot-en-presentation/#/communications-4)
 * [PMR](https://pascalbod.github.io/iot-en-presentation/#/communications-5)
 * [On short distances](https://pascalbod.github.io/iot-en-presentation/#/communications-6)
