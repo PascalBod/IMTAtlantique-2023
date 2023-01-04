@@ -42,19 +42,19 @@ Practical sessions:
 
 ### Session 2 - 04-Jan - Software - part 1
 
-* [Cross development](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/1)
-* [Execution environments](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/5)
+* [Cross development](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/8/1)
+* [Execution environments](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/8/5)
   * OS
   * RTOS
-  * [Bare metal ](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/19)
+  * [Bare metal ](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/8/19)
     * Interruptions and background task
     * Usual architecture of a bare metal application
-* [Useful design patterns](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/54)
-
-Presentation of the target board:
-* ESP32, ESP-EYE, development environment, etc.
+* [Useful design patterns](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/8/54)
+* [RTOS](https://pascalbod.github.io/rtos-en-presentation/)
 
 ### Session 3 - 10-Jan - Target board
+
+End of RTOS part
 
 * ESP32 microcontroller
   * Microcontroller characteristics
@@ -79,14 +79,7 @@ Presentation of the target board:
 
 ### Session 4a - 11-Jan - Software - part 2
 
-* [RTOS](https://pascalbod.github.io/rtos-en-presentation/)
-  * Components
-  * Accessing shared resources
-  * Exchanging data between tasks
-  * Synchronizing
-  * Time
-  * Memory allocation
-  * Middleware
+Presentation of some sample code
 
 ### Session 4b - 17-Jan - Communications - part 1
 
