@@ -16,7 +16,7 @@
 // Detection LED is controlled by GPIO 21 (check the schematic).
 #define GPIO_DETECT_LED GPIO_NUM_21
 // Blinking half period, in ms.
-#define BLINK_PERIOD_MS 100
+#define BLINK_PERIOD_MS 500
 
 static const char TAG[] = "LED";
 
@@ -24,10 +24,10 @@ void app_main(void)
 {
 	esp_err_t rs;
 
-	// Select GPIO function for the pin, enable pullup, disable I/O.
+	// Select GPIO function for the pin, enable pull-up, disable I/O.
 	// No need to check returned status: it is always ESP_OK.
 	gpio_reset_pin(GPIO_DETECT_LED);
-	// Disable pullup, as there is an external pulldown.
+	// Disable pull-up, as there is an external pull-down.
 	rs = gpio_set_pull_mode(GPIO_DETECT_LED, GPIO_FLOATING);
 	if (rs != ESP_OK) {
 		ESP_LOGE(TAG, "Error from gpio_set_pull_mode: %s", esp_err_to_name(rs));
