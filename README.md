@@ -52,30 +52,70 @@ Practical sessions:
 * [Useful design patterns](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/8/54)
 * [RTOS](https://pascalbod.github.io/rtos-en-presentation/)
 
-### Session 3 - 10-Jan - Target board
+### Session 3 - 10-Jan - Playing with the target board
 
-End of RTOS part
+**Note**: for this part, the development environment must have been installed (see farther below).
 
-* ESP32 microcontroller
-  * Microcontroller characteristics
-  * Hardware documentation
-  * Software documentation
-  * Wi-Fi
-  * Bluetooth
-  * Interrupt matrix
-  * IO_MUX and GPIO matrix
-  * GPIO
-  * I2S
-  * Serial link
-  * Timer
-* ESP32-EYE board
-  * Characteristics
-  * Schematics
-* Software
-  * ESP-IDF
-  * ESP-WHO
-  * Eclipse IDE
-* Build, run, debug
+#### Development environment
+
+* [Eclipse IDE](https://www.eclipse.org/ide/) - open source, free, developed by the Eclipse Foundation
+* [Eclipse IDF plugin](https://github.com/espressif/idf-eclipse-plugin) - open source, free, developed by Espressif
+* ESP-IDF:
+  * [Overview](https://www.espressif.com/en/products/sdks/esp-idf)
+  * [Getting started](https://docs.espressif.com/projects/esp-idf/en/v4.4.3/esp32/get-started/index.html)
+  * open source, free, developed by Espressif
+* FreeRTOS:
+  * [Website](https://www.freertos.org)
+  * [Developer Docs](https://www.freertos.org/features.html)
+* C language: [a list of resources](https://systev.com/c-a-list-of-resources/)
+
+#### Hardware environment
+
+* ESP32:
+  * [Main webpage](https://www.espressif.com/en/products/socs/esp32)
+  * [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+  * [Technical Reference Manual](https://www.espressif.com/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf)
+  * [Programming Guide](https://docs.espressif.com/projects/esp-idf/en/v4.4.3/esp32/index.html)
+* ESP-EYE:
+  * [Main webpage](https://www.espressif.com/en/products/devkits/esp-eye/overview)
+  * [Getting Started Guide](https://github.com/espressif/esp-who/blob/master/docs/en/get-started/ESP-EYE_Getting_Started_Guide.md)
+
+#### Software development
+
+##### Some sample examples
+
+* `Hello World`
+  * Eclipse workspace
+  * A first ESP-IDF project
+  * Build, flash, check messages
+* First sample application: `detectionLed`
+  * [Overview of ESP-EYE](https://github.com/espressif/esp-who/blob/master/docs/en/get-started/ESP-EYE_Getting_Started_Guide.md)
+  * The schematic, from the [Reference Design](https://www.espressif.com/sites/default/files/documentation/ESP-EYE_V2.1_Reference_Design_0.zip)
+    * ESP32 pin layout: section 2.1 of the DS
+    * ESP32 GPIO: section 4.1.1 of the DS, section 4 of the TRM
+    * Which state after reset: section 4.10 of the TRM
+    * Pull-down resistor
+    * Summary: the project `README` file
+  * [ESP-IDF GPIO](https://docs.espressif.com/projects/esp-idf/en/v4.4.3/esp32/api-reference/peripherals/gpio.html)
+    * A rapid overview
+    * A link to some examples
+    * The API
+  * Import project
+  * Build, flash, check messages
+  * Modify
+* Second sample application: `sideButton`
+  * Using `gpio_install_isr_service` instead of `gpio_isr_register`
+  * Build, flash, check messages
+  * Modify for detection on rising edge and falling edge
+
+How the LED and the button could be used in a real-life application? Pressing on the side button could start some data acquisition and an inference, the end of the inference could be signaled by the LED...
+
+##### Exercise 1
+
+Create a project according to the following specifications:
+* Right after reset, the LED is off
+* Pressing on the button and keeping it pressed turns the LED on
+* Releasing the button turns the LED off
 
 ### Session 4a - 11-Jan - Software - part 2
 
@@ -113,7 +153,7 @@ FreeRTOS, as an RTOS (Real-Time Operating System), provides the means to archite
 
 An application can be developped using three different types of environments:
 
-* [Eclipse IDE](https://www.eclipse.org/ide/) (Integrated Development Environment), thanks to a [dedicated plugin](https://github.com/espressif/idf-eclipse-plugin/blob/master/README.md)
+* [Eclipse IDE](https://www.eclipse.org/ide/) (Integrated Development Environment), thanks to a [dedicated plugin](https://github.com/espressif/idf-eclipse-plugin)
 * [Visual Studio Code](https://code.visualstudio.com/), thanks to a [dedicated extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension)
 * the [command line](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html), with any code editor
 
