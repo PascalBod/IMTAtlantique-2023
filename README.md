@@ -129,6 +129,14 @@ The project must be named `exercise1`.
 
 Note: [FreeRTOS has been slightly adapted to ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/v4.4.3/esp32/api-reference/system/freertos.html).
 
+##### Exercise 2
+
+Question 1: remove the call to `vTaskDelay` function in `app_main`. Build, run, check trace messages. What happens? How do you explain this?
+
+Question 2: reduce task stack size to 100. Build, run, check trace messages. What happens?
+
+Question 3: read the [description of the `uxTaskGetStackHighWaterMark` function](https://freertos.org/uxTaskGetStackHighWaterMark.html). Then, use the function to find a minimal value for task1 stack depth.
+
 ### Session 4a - 11-Jan - Software - part 2
 
 Presentation of some sample code
