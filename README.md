@@ -87,6 +87,8 @@ Practical sessions:
 * `Hello World`
   * Eclipse workspace
   * A first ESP-IDF project
+  * ESP-IDF automatically starts FreeRTOS scheduler
+  * Then it starts the `app_main` task, which must be implemented by the developer
   * Build, flash, check messages
 * First sample application: `detectionLed`
   * [Overview of ESP-EYE](https://github.com/espressif/esp-who/blob/master/docs/en/get-started/ESP-EYE_Getting_Started_Guide.md)
@@ -112,10 +114,20 @@ How the LED and the button could be used in a real-life application? Pressing on
 
 ##### Exercise 1
 
-Create a project according to the following specifications:
+Create an application according to the following specifications:
 * Right after reset, the LED is off
 * Pressing on the button and keeping it pressed turns the LED on
 * Releasing the button turns the LED off
+
+The project must be named `exercise1`.
+
+##### Going on with sample applications
+
+* Third sample application: starting tasks
+  * A [task is a FreeRTOS object](https://freertos.org/taskandcr.html)
+  * A task has its own stack
+
+Note: [FreeRTOS has been slightly adapted to ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/v4.4.3/esp32/api-reference/system/freertos.html).
 
 ### Session 4a - 11-Jan - Software - part 2
 
