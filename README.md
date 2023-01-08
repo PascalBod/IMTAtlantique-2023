@@ -131,11 +131,13 @@ Note: [FreeRTOS has been slightly adapted to ESP-IDF](https://docs.espressif.com
 
 ##### Exercise 2
 
-Question 1: remove the call to `vTaskDelay` function in `app_main`. Build, run, check trace messages. What happens? How do you explain this?
+Question 1: each task displays a trace message. How does it happen that the contents of the messages are not mixed, from time to time?
 
-Question 2: reduce task stack size to 100. Build, run, check trace messages. What happens?
+Question 2: remove the call to `vTaskDelay` function in `app_main`. Build, run, check trace messages. What happens? How do you explain this?
 
-Question 3: read the [description of the `uxTaskGetStackHighWaterMark` function](https://freertos.org/uxTaskGetStackHighWaterMark.html). Then, use the function to find a minimal value for task1 stack depth.
+Question 3: reduce task stack size to 100. Build, run, check trace messages. What happens?
+
+Question 4: read the [description of the `uxTaskGetStackHighWaterMark` function](https://freertos.org/uxTaskGetStackHighWaterMark.html). Then, use the function to find a minimal value for task1 stack depth, and test it.
 
 ### Session 4a - 11-Jan - Software - part 2
 
