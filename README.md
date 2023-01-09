@@ -156,7 +156,7 @@ Modify `exercise1` in order to use synchronization on a binary semaphore instead
 
 ##### Exercise 4
 
-Create a copy of 'O5-messageQueue' and modify it so that you can let the two tasks use the same function. In other words, instead of having two very similar `task1` and `task2` functions, you'll have only one function. But the application will still start two tasks, one sending `MSG_TASK1` messages and the other one sending `MSG_TASK2` messages.
+Create a copy of `05-messageQueue` and modify it so that you can let the two tasks use the same function. In other words, instead of having two very similar `task1` and `task2` functions, you'll have only one function. But the application will still start two tasks, one sending `MSG_TASK1` messages and the other one sending `MSG_TASK2` messages.
 
 ### Session 4a - 11-Jan - Software - part 2
 
