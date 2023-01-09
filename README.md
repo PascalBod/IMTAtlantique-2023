@@ -150,7 +150,7 @@ Modify `exercise1` in order to use synchronization on a binary semaphore instead
 
 ##### Going on with sample applications
 
-* Fifth sample application: '05-messageQueue'
+* Fifth sample application: `05-messageQueue`
   * How to exchange data between asynchronous code, and to synchronize: the main task waits for messages sent by two other tasks. Every message contains a counter
   * Additionally: how to serialize events
 
