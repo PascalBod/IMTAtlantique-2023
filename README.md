@@ -148,6 +148,12 @@ Question 4: read the [description of the `uxTaskGetStackHighWaterMark` function]
 
 Modify `exercise1` in order to use synchronization on a binary semaphore instead of polling of a flag.
 
+##### Going on with sample applications
+
+* Fifth sample application: '05-messageQueue'
+  * How to exchange data between asynchronous code, and to synchronize: the main task waits for messages sent by two other tasks. Every message contains a counter
+  * Additionally: how to serialize events
+
 ### Session 4a - 11-Jan - Software - part 2
 
 Presentation of some sample code
