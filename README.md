@@ -154,6 +154,10 @@ Modify `exercise1` in order to use synchronization on a binary semaphore instead
   * How to exchange data between asynchronous code, and to synchronize: the main task waits for messages sent by two other tasks. Every message contains a counter
   * Additionally: how to serialize events
 
+##### Exercise 4
+
+Create a copy of 'O5-messageQueue' and modify it so that you can let the two tasks use the same function. In other words, instead of having two very similar `task1` and `task2` functions, you'll have only one function. But the application will still start two tasks, one sending `MSG_TASK1` messages and the other one sending `MSG_TASK2` messages.
+
 ### Session 4a - 11-Jan - Software - part 2
 
 Presentation of some sample code
