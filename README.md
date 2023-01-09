@@ -90,7 +90,7 @@ Practical sessions:
   * ESP-IDF automatically starts FreeRTOS scheduler
   * Then it starts the `app_main` task, which must be implemented by the developer
   * Build, flash, check messages
-* First sample application: `detectionLed`
+* First sample application: `01-detectionLed`
   * [Overview of ESP-EYE](https://github.com/espressif/esp-who/blob/master/docs/en/get-started/ESP-EYE_Getting_Started_Guide.md)
   * The schematic, from the [Reference Design](https://www.espressif.com/sites/default/files/documentation/ESP-EYE_V2.1_Reference_Design_0.zip)
     * ESP32 pin layout: section 2.1 of the DS
@@ -105,7 +105,7 @@ Practical sessions:
   * Import project
   * Build, flash, check messages
   * Modify
-* Second sample application: `sideButton`
+* Second sample application: `02-sideButton`
   * Using `gpio_install_isr_service` instead of `gpio_isr_register`
   * Build, flash, check messages
   * Modify for detection on rising edge and falling edge
@@ -123,7 +123,7 @@ The project must be named `exercise1`.
 
 ##### Going on with sample applications
 
-* Third sample application: starting tasks
+* Third sample application: `03-tasks`
   * A [task is a FreeRTOS object](https://freertos.org/taskandcr.html)
   * A task has its own stack
 
@@ -138,6 +138,15 @@ Question 2: remove the call to `vTaskDelay` function in `app_main`. Build, run, 
 Question 3: reduce task stack size to 100. Build, run, check trace messages. What happens?
 
 Question 4: read the [description of the `uxTaskGetStackHighWaterMark` function](https://freertos.org/uxTaskGetStackHighWaterMark.html). Then, use the function to find a minimal value for task1 stack depth, and test it.
+
+##### Going on with sample applications
+
+* Fourth sample application: `04-binSemaphore`
+  * How to use a (binary) semaphore to synchronize a task and an ISR
+
+##### Exercise 3
+
+Modify `exercise1` in order to use synchronization on a binary semaphore instead of polling of a flag.
 
 ### Session 4a - 11-Jan - Software - part 2
 
