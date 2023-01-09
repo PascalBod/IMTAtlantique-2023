@@ -11,7 +11,6 @@
 
 #include "esp_log.h"
 
-#define MAIN_PERIOD_MS 1000
 #define TASK1_MSG_PERIOD_MS 2000
 #define TASK2_MSG_PERIOD_MS 2300
 
@@ -61,11 +60,6 @@ void app_main(void) {
         goto exit_on_fatal_error;
     }
 
-    // Now, enter an infinite loop, so that the tasks are not deleted.
-    while  (true) {
-        vTaskDelay(pdMS_TO_TICKS(MAIN_PERIOD_MS));
-    }
-
     exit_on_fatal_error:
-    ESP_LOGE(TAG, "Exiting");
+    ESP_LOGI(TAG, "Exiting app_main");
 }
