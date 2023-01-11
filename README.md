@@ -133,7 +133,7 @@ Note: [FreeRTOS has been slightly adapted to ESP-IDF](https://docs.espressif.com
 
 Question 1: each task displays a trace message. How does it happen that the contents of the messages are not mixed, from time to time?
 
-Question 2: remove the call to `vTaskDelay` function in `app_main`. Build, run, check trace messages. What happens? How do you explain this?
+Question 2: remove the call to `vTaskDelay` function in one task. Build, run, check trace messages. What happens? How do you explain this?
 
 Question 3: reduce task stack size to 100. Build, run, check trace messages. What happens?
 
