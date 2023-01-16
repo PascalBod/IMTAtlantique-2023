@@ -36,7 +36,6 @@ void app_main(void) {
 	// gpio_example_main.c example, 0 seems to be a good value for the
 	// argument to gpio_install_isr_service.
 	esp_err_t es_rs = gpio_install_isr_service(0);
-
 	if (es_rs != ESP_OK) {
 			ESP_LOGE(TAG, "Error from gpio_install_isr_service: %s",
 					 esp_err_to_name(es_rs));
