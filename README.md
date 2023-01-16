@@ -308,3 +308,23 @@ The architecture of the skeleton application relies on the following elements:
 The user function may be written in C++.
 
 Check the `README` file of the project for more information.
+
+**Important**: the project reuse components provided by [ESP-WHO](https://github.com/espressif/esp-who). If ESP-WHO is not installed yet, download it:
+
+```shell
+$ git clone --recursive https://github.com/espressif/esp-who.git
+```
+
+Then, configure `06-skeletonApp` by modifying the top `CMakeLists.txt` file in order to adapt the definition of `EXTRA_COMPONENT_DIRS` to your ESP-WHO installation:
+
+```
+# The following lines of boilerplate have to be in your project's
+# CMakeLists in this exact order for cmake to work correctly
+cmake_minimum_required(VERSION 3.5)
+
+set(EXTRA_COMPONENT_DIRS /home/developer/DevTools/esp-who/components)  # <== adapt directory path
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+get_filename_component(ProjectId ${CMAKE_CURRENT_LIST_DIR} NAME)
+string(REPLACE " " "_" ProjectId ${ProjectId})
+project(${ProjectId})
+```
