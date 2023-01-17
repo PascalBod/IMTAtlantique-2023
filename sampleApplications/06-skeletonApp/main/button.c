@@ -3,7 +3,6 @@
  * this code.
  */
 #include <stdbool.h>
-#include <sys/time.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -25,12 +24,6 @@ static QueueHandle_t *main_queue = NULL;
 
 static bool error_detected = false;
 
-// To perform some trivial debouncing.
-static const uint64_t MIN_PRESS_PERIOD_US = 1000;
-static struct timeval tv_now;
-static uint64_t previous_press_time_us;
-static uint64_t current_time_us;
-
 void button_task_set_main_queue(QueueHandle_t *m_queue) {
 
     main_queue = m_queue;
@@ -46,15 +39,7 @@ static void gpio_interrupt_handler(void *arg) {
         error_detected = true;
         return;
     }
-    // Ensure that there is a minimum time period between two presses
-    // (debouncing).
-    gettimeofday(&tv_now, NULL);
-    current_time_us = (int64_t)tv_now.tv_sec * 1000000L + (int64_t)tv_now.tv_usec;
-    if (current_time_us - previous_press_time_us < MIN_PRESS_PERIOD_US) {
-        return;
-    }
-    previous_press_time_us = current_time_us;
-    // At this stage, we can send a message to the target queue.
+    // Inform main task.
     BaseType_t higher_priority_task_woken = pdFALSE;
     main_msg_t msg = {MAIN_MSG_BUTTON_PRESSED};
     BaseType_t fr_rs = xQueueSendFromISR(*main_queue, &msg, &higher_priority_task_woken);
@@ -117,8 +102,6 @@ void button_task(void *taskParameters) {
                 esp_err_to_name(es_rs));
         goto exit_on_fatal_error;
     }
-
-    previous_press_time_us = 0;
 
     // Keep the task alive, but do (almost) nothing.
     while(true) {

@@ -116,7 +116,8 @@ How the LED and the button could be used in a real-life application? Pressing on
 
 ### Session 4 - 17-Jan - End of RTOS part + part 1 of Communications
 
-* [RTOS](https://pascalbod.github.io/rtos-en-presentation/) - Debouncing, time, memory allocation
+* [RTOS](https://pascalbod.github.io/rtos-en-presentation/) - Time, memory allocation
+* Integrating AI and RTOS: `06-skeletonApp`
 * [Data interchange](https://pascalbod.github.io/iot-en-presentation/#/communications-7)
   * Stream or message
   * Transparency, endianness, serialization
