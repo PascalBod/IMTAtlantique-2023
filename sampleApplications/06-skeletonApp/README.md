@@ -4,7 +4,7 @@
 
 The target board is the ESP-EYE board.
 
-The development environment is ESP-IDF version ?
+The development environment is ESP-IDF version 4.4.3.
 
 ## Functional point of view
 
@@ -53,3 +53,59 @@ The following picture depicts inter-task communication:
 
 If the user function preempts a core for too long a period, ESP-IDF core watchdog will reset the application. The current watchog timeout period is set to 5 seconds. It can be increased with in *sdkconfig*: **Component Config > ESP System Settings > Task Watchdog imeout period**.
 
+## Project configuration
+
+The project reuses components provided by [ESP-WHO](https://github.com/espressif/esp-who). If ESP-WHO is not installed yet, download it:
+
+```shell
+$ git clone --recursive https://github.com/espressif/esp-who.git
+```
+
+Then, configure `06-skeletonApp` by modifying the top `CMakeLists.txt` file in order to adapt the definition of `EXTRA_COMPONENT_DIRS` to your ESP-WHO installation:
+
+```
+# The following lines of boilerplate have to be in your project's
+# CMakeLists in this exact order for cmake to work correctly
+cmake_minimum_required(VERSION 3.5)
+
+set(EXTRA_COMPONENT_DIRS /home/developer/DevTools/esp-who/components)  # <== adapt directory path
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+get_filename_component(ProjectId ${CMAKE_CURRENT_LIST_DIR} NAME)
+string(REPLACE " " "_" ProjectId ${ProjectId})
+project(${ProjectId})
+```
+
+## How the project was created
+
+The projcet was created using `esp_who/examples/human_face_detection/web` as a model, with the following steps:
+* Create an empty ESP-IDF project
+* In `CMakeLists.txt` file, add the following line (adapt as required):
+
+```
+set(EXTRA_COMPONENT_DIRS /home/developer/DevTools/esp-who/components)
+```
+
+* Copy the `/home/developer/DevTools/esp-who/examples/human_face_detection/web/sdkconfig.defaults.esp32` file to `skeletonApp` directory
+* Add the following lines to this file, taken from the `sdkconfig.defaults` file of the above human face detection sample project:
+
+```
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+
+CONFIG_SPIRAM_SPEED_80M=y
+
+CONFIG_ESP_TASK_WDT=n
+
+# Wait for esp-idf stable
+CONFIG_BOOTLOADER_COMPILER_OPTIMIZATION_PERF=y
+CONFIG_BOOTLOADER_LOG_LEVEL_NONE=y
+CONFIG_SPIRAM_MEMTEST=n
+```
+
+`sdkconfig` is augmented by some ESP-WHO menus which do not come from the above import. 
+
+The type of the board must be selected (**Component Config > ESP-WHO Configuration**).
+
+SPI RAM (PSRAM) must be enabled, with **Component Config > ESP3-specific > Support for external, SPI-connected RAM**

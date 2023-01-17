@@ -310,7 +310,7 @@ The user function may be written in C++.
 
 Check the `README` file of the project for more information.
 
-**Important**: the project reuse components provided by [ESP-WHO](https://github.com/espressif/esp-who). If ESP-WHO is not installed yet, download it:
+**Important**: the project reuses components provided by [ESP-WHO](https://github.com/espressif/esp-who). If ESP-WHO is not installed yet, download it:
 
 ```shell
 $ git clone --recursive https://github.com/espressif/esp-who.git
