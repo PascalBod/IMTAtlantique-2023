@@ -77,7 +77,7 @@ project(${ProjectId})
 
 ## How the project was created
 
-The projcet was created using `esp_who/examples/human_face_detection/web` as a model, with the following steps:
+The project was created using `esp_who/examples/human_face_detection/web` as a model, with the following steps:
 * Create an empty ESP-IDF project
 * In `CMakeLists.txt` file, add the following line (adapt as required):
 
@@ -108,4 +108,4 @@ CONFIG_SPIRAM_MEMTEST=n
 
 The type of the board must be selected (**Component Config > ESP-WHO Configuration**).
 
-SPI RAM (PSRAM) must be enabled, with **Component Config > ESP3-specific > Support for external, SPI-connected RAM**
+SPI RAM (PSRAM) must be enabled, with **Component Config > ESP32-specific > Support for external, SPI-connected RAM**

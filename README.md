@@ -332,6 +332,10 @@ string(REPLACE " " "_" ProjectId ${ProjectId})
 project(${ProjectId})
 ```
 
+Finally:
+* Select the type of the board (ESP-EYE) with **Component Config > ESP-WHO Configuration**
+* Enable SPI RAM (PSRAM) with **Component Config > ESP32-specific > Support for external, SPI-connected RAM**
+
 ##### Exchange UDP datagrams with a remote application
 
 Check [this repository](https://github.com/PascalBod/espidf-udp).
