@@ -289,10 +289,12 @@ Create a copy of `05-messageQueue` and modify it so that you can let the two tas
 
 #### Going on with sample applications
 
-* `06-skeletonApp`
-  * When the user clicks on the side button, the camera starts returning a stream of pictures
-  * Every picture is sent to a function provided by the user. This function may perform some processing on the picture
-  * When the user function is done, it can call a function provided by the skeleton, which will set the detection LED on for a short period of time
+##### `06-skeletonApp`
+
+Fnctional point of view:
+* When the user clicks on the side button, the camera starts returning a stream of pictures
+* Every picture is sent to a function provided by the user. This function may perform some processing on the picture
+* When the user function is done, it can call a function provided by the skeleton, which will set the detection LED on for a short period of time
 
 The architecture of the skeleton application relies on the following elements:
 * Several tasks are running
@@ -329,3 +331,7 @@ get_filename_component(ProjectId ${CMAKE_CURRENT_LIST_DIR} NAME)
 string(REPLACE " " "_" ProjectId ${ProjectId})
 project(${ProjectId})
 ```
+
+##### Exchange UDP datagrams with a remote application
+
+Check [this repository](https://github.com/PascalBod/espidf-udp).
