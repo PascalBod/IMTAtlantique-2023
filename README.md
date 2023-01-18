@@ -2,23 +2,15 @@
 
 ## Embedded software development
 
-### Communication
-
-* [Webex link](https://imt-atlantique.webex.com/meet/MSc-IT)
-* [Mattermost link](https://mattermost.imt-atlantique.fr/mooc-plido/channels/os-and-ml)
-
 ### Schedule
 
-* Tue 03-Jan - 09:30-10:45, 11:00-12:15 - session 1 - Webex
-* Wed 04-Jan - 09:30-10:45, 11:00-12:15 - session 2 - Webex
+* Tue 03-Jan - 09:30-10:45, 11:00-12:15 - session 1 - remote
+* Wed 04-Jan - 09:30-10:45, 11:00-12:15 - session 2 - remote
 * Tue 10-Jan - 09:30-10:45, 11:00-12:15 - session 3 - on site
-* Wed 11-Jan - 09:30-10:45 - session 4a - on site
-* Tue 17-Jan - 15:15-16:30 - session 4b - Webex
-* Wed 18-Jan - 09:30-10:45, 11:00-12:15 - session 5 - Webex
-
-Practical sessions:
-* Wed 11-Jan - 11:00-12:15
-* Tue 17-Jan - 09:30-10:45, 11:00-12:15, 13:45-15:00
+* Wed 11-Jan - 09:30-10:45, 11:00-12:15 - session 3b + practical session - on site, with Sebastian
+* Tue 17-Jan - 09:30-10:45, 11:00-12:15 - practical session, by Sebastian
+* Tue 17-Jan - 13:45-15:00, 15:15-16:30 - session 4 - remote
+* Wed 18-Jan - 09:30-10:45, 11:00-12:15 - session 5 - remote
 
 ### Course material
 
